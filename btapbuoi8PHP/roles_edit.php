@@ -3,9 +3,11 @@ require 'employee.php';
 $role = get_all_role();
 
 $available_roles = [
-    'Manager' => 'Manager',
+     'Manager' => 'Manager',
     'Employee' => 'Employee',
     'Intern' => 'Intern',
+    'Analyst' => 'Analyst', 
+    'Director' => 'Director',  
 ];
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
@@ -52,12 +54,12 @@ disconnect_db();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sửa thông tin nhân viên</title>
+    <title>Sửa thông tin chức vụ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Sửa thông tin nhân viên</h1>
+    <h1>Sửa thông tin chức vụ</h1>
     <a href="roles_list.php">Trở về</a><br/><br/>
     <form method="post" action="roles_edit.php?id=<?php echo $id; ?>">
         <table width="50%" border="1" cellspacing="0" cellpadding="10">
